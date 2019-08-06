@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				padding: 10px;
+				border: 10px solid #FFFF00;
+			}
+			
+			#box2{
+				padding: 100px;
+				background-color: #6495ED;
+			};
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box1=document.getElementById("box1");
+				var btn01=document.getElementById("btn01");
+				btn01.onclick=function(){
+					/* 
+					clientHith
+					clientHeight
+					可以获取可见宽度和可见高度
+					包括内容区和内边距
+					这些属性都是只读的，不能修改
+					*/
+				   
+				   /* 
+				   offsetWidth
+				   offsetHeight
+				   可以获取元素整个的大小，包括内容区和内边距
+				   */
+				  
+				  /* 
+				  offsetParent
+				  可以用来获取当前元素的父元素
+				  会获取到离当前元素最近的开启了定位的祖先元素
+				  如果所有的祖先元素都没有开启定位，会返回body
+				  */
+				 
+				 /* 
+				 offsetLeft
+					当前元素相对于其他定位父元素的水平平移量
+				offsetTop
+					当前元素相当于其他定位父元素的垂直平移量
+				 */
+				   alert(box1.offsetTop);
+				};
+			};
+		</script>
+		
+	</head>
+	<body>
+		<button type="button" id="btn01">点我一下</button>
+		<br></br>
+		<div id="box2" style="position: relative;">
+			<div id="box1"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      /*
+      数组  --也是一个对象
+      数组的存储性能比普通对象要好
+      */
+
+      // 创建数组对象
+      var arr=new Array();
+
+
+      //如果读取不存在的索引，不会报错，会返回underfined
+      arr[0]=10;
+      arr[1]=33;
+
+      //获取数组长度
+      //可以使用length获取数组的长度
+
+      console.log(arr.length);
+
+      //对于非连续的数组，使用length，会获得最大的索引
+      //尽量不要创建非连续的数组
+
+      arr.length=10;
+      console.log(arr);
+      console.log(arr.length);
+
+      //永远像数组的最后添加元素
+      arr[arr.length+1]=60;
+      console.log(arr);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

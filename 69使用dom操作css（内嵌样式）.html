@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				//点击按钮以后修改box1的大小
+				/* 我们通过js修改的样式往往是内联样式
+				 这个样式的优先值比较高
+				 但是，如果在我们的样式中写了!important*/
+				var btn01=document.getElementById("btn01");
+				var box1=document.getElementById("box1");
+				btn01.onclick=function(){
+					/* 通过js修改元素的样式 
+					语法：元素.style.样式名=样式值*/
+					box1.style.width="300px";
+					box1.style.height="300px";					
+					box1.style.backgroundColor="yellow";
+				};
+				
+				//点击按钮之后读取样式
+				//通过style属性设置和读取的都是内联样式
+				//没法读取样式表中的样式
+				var btn02=document.getElementById("btn02");
+				btn02.onclick=function(){
+					alert(btn02.style);
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<button type="button" id="btn01">点我一下</button>
+		<button type="button" id="btn02">读取样式</button>
+		<div id="box1"></div>
+	</body>
+</html>

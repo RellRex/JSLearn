@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      /*
+      将其他的数据类型转换成number
+        方法一：使用Number()函数
+            1.纯数字转换为数字
+            2.如果存在非数字的内容，转换为NaN
+            3.如果字符串是一个空串或全是空格的字符串，则转换成0
+            4.true转换成1，false转换成0
+            5.null转换成0
+            6.undefined转换成NaN
+
+        方法二：专门用来对付字符串
+        parseInt() 把一个字符串转换为整数,将字符串中有效的整数内容取出来
+        parseFloat() 把一个字符串转换为浮点数,作用和parseInt类似
+      */
+
+      var a="123.456px";
+      a=parseFloat(a)
+      console.log(typeof a)
+      console.log(a)
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

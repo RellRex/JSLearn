@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>全选练习</title>
+<script type="text/javascript">
+	
+	//设置一个函数
+	function myClick(btnName,fun){
+		var btn=document.getElementById(btnName);
+		btn.onclick=fun;
+	};
+	
+	window.onload = function(){
+		var checkedAllBox=document.getElementById("checkedAllBox");
+		
+		//1.#checkedAllBtn
+		//点击按钮以后,四个全部被选中
+		myClick("checkedAllBtn",function(){
+			var items=document.getElementsByName("items");
+			for(var i=0;i<items.length;i++){
+				// 通过多选框的checked属性可以获取或设置多选框的选中状态
+				items[i].checked=true;
+			};
+			checkedAllBox.checked=true;
+		});
+		
+		//2.#checkedNoBtn
+		myClick("checkedNoBtn",function(){
+			var items=document.getElementsByName("items");
+			for(var i=0;i<items.length;i++){
+				items[i].checked=false;
+			};
+			checkedAllBox.checked=false;
+		});
+		
+		//3.#checkedRevBtn
+		myClick("checkedRevBtn",function(){
+			var items=document.getElementsByName("items");
+			for(var i=0;i<items.length;i++){
+				if(items[i].checked){
+					items[i].checked=false;
+				}else{
+					items[i].checked=true;
+				};
+			};
+			
+			for(var i=0;i<items.length;i++){
+				checkedAllBox.checked=true;
+				if(!items[i].checked){
+					checkedAllBox.checked=false;
+					break;
+				};
+			};
+		});
+		
+		//4.#sendBtn
+		//点击按钮以后将所有的多选框弹出
+		myClick("sendBtn",function(){
+			var items=document.getElementsByName("items")
+			for(var i=0;i<items.length;i++){
+				if(items[i].checked){
+					alert(items[i].value);
+				}else{
+					continue;
+				};
+			};
+		});
+		
+		//5.#checkedAllBox
+		checkedAllBox.onclick=function(){
+			//在事件的响应函数中,事件是给谁绑定的,this就是谁
+			var items=document.getElementsByName("items");
+			for(var i=0;i<items.length;i++){
+				items[i].checked=this.checked;
+			};
+		};
+		
+		//6.items
+		/* 如果四个多选框全部选中，checkAllBox也应该选中
+		 如果四个多选框没有全部选中，checkAllBox也不选中*/
+		var items=document.getElementsByName("items");
+		for(var i=0;i<items.length;i++){
+			//判断四个多选框是否全选
+			//只要有一个没选中,就是不是全选
+			items[i].onclick=function(){
+				for(var j=0;j<items.length;j++){
+					checkedAllBox.checked=true;
+					
+					if(!items[j].checked){
+						checkedAllBox.checked=false;
+						break;
+					};
+				};
+			};
+		};
+		
+	}
+	
+</script>
+</head>
+<body>
+
+	<form method="post" action="">
+		你爱好的运动是？<input type="checkbox" id="checkedAllBox" />全选/全不选 
+		
+		<br />
+		<input type="checkbox" name="items" value="足球" />足球
+		<input type="checkbox" name="items" value="篮球" />篮球
+		<input type="checkbox" name="items" value="羽毛球" />羽毛球
+		<input type="checkbox" name="items" value="乒乓球" />乒乓球
+		<br />
+		<input type="button" id="checkedAllBtn" value="全　选" />
+		<input type="button" id="checkedNoBtn" value="全不选" />
+		<input type="button" id="checkedRevBtn" value="反　选" />
+		<input type="button" id="sendBtn" value="提　交" />
+	</form>
+
+</body>
+</html>

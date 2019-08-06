@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      /*
+        slice：可以用来从数组提取可用的元素
+              -语法 arr.slice(start,end)  开始位置和结束位置
+              该方法不会改变原数组
+              包含开始不包含结束
+              arr.slice(1) 会截取从1往后的所有的值
+              如果传递一个负值，从后往前使用
+
+        splice：可以用于删除数组中的指定元素
+                splice(1,2，3)
+                1表示开始位置的索引
+                2表示数量
+                3可以传一些新的元素
+                插入的位置是原来开始的位置
+      */
+      var arr=["Banana", "Orange", "Lemon", "Apple", "Mango"];
+      var result=arr.slice(0,3);
+      console.log(result);
+
+      arr.splice(0,2,"Orange");
+      console.log(arr);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

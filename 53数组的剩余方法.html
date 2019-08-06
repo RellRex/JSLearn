@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var arr1=["Banana", "Orange", "Lemon", "Apple", "Mango"];
+      var arr2=["Lemon", "Apple", "Mango"];
+      /*
+      concat()可以连接两个或多个数组，并将新的数组返回
+      该方法不会对原数组产生影响
+      */
+
+      result=arr1.concat(arr2);
+      console.log(arr1);
+      console.log(result);
+
+      /*
+      join:可以将一个数组转换成一个字符串
+          该方法不会对原数组产生影响
+          输入一个参数会成为连接符
+          如果不指定会默认逗号
+      */
+      console.log(arr1.join("hello"));
+
+      /*
+      reverse：可以颠倒数组中的元素
+          该方法会影响原数组
+      */
+      console.log(arr1.reverse());
+      console.log(arr1);
+
+      /*
+      sort()
+          -可以对元素组进行排序
+          该方法会影响原数组
+          即使对用纯数字的数组，也会使用unicode进行排序
+
+          我们可以自己指定排序的顾泽
+      */
+      arr3=[1,2,3,5,3,2,4,54,1,1,2,2,22];
+      arr3.sort(function(a,b){
+        /*
+        if(a>b){
+          return 1;
+        }else if(a<b){
+          return -1;
+        }else{
+          return 0;
+        };
+        */
+        return a-b;
+      });
+      console.log(arr3);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

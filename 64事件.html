@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!--
+    我们可以在事对于属性中设置一些js代码
+    这样当事件被触发时，这些代码将会被执行
+
+    这种写法称为结构和行为耦合，不推荐使用
+   -->
+    <button type="button" name="button" id="btn">我是一个按钮</button>
+    <script type="text/javascript">
+      /*
+      事件就是用户和浏览器交互的行为
+      比如：点击按钮，鼠标移动
+      */
+
+      /*
+      可以为按钮的对应时间绑定相应函数的形式来响应事件
+      当我们的事件被触发时，函数才会执行
+      */
+
+      var btn=document.getElementById("btn");
+
+      //为按钮绑定一个点击
+      btn.onclick=function(){
+        alert("你还点~~~~");
+      };
+
+    </script>
+  </body>
+</html>

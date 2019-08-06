@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      /*
+      forEach():遍历数组
+      像这种有我们创建但是不由我们调用的函数称为回调函数
+      数组中有几个元素，我们的函数就会执行几次
+      浏览器会将遍历到的元素以实参的形式传递回来
+      浏览器会在回调函数中传递3个元素
+      第一个参数是具体的值
+      第二个参数为索引
+      第三个参数是正在遍历的数组
+      */
+
+      //创建一个数组
+      var arr=["孙悟空","猪八戒","沙和尚"];
+
+      arr.forEach(function(a){
+        console.log(a);
+      });
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

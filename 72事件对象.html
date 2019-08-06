@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	#areaDiv {
+		border: 1px solid black;
+		width: 300px;
+		height: 50px;
+		margin-bottom: 10px;
+	}
+	
+	#showMsg {
+		border: 1px solid black;
+		width: 300px;
+		height: 20px;
+	}
+
+</style>
+<script type="text/javascript">
+
+	/* 
+	 当我们的鼠标在areaDiv中移动是，在showMsg中显示坐标
+	 */
+	window.onload=function(){
+		var areaDiv=document.getElementById("areaDiv");
+		var showMsg=document.getElementById("showMsg");
+		
+		/* 
+		 onmousemove
+		 该事件将在鼠标移动的时候出发
+		 */
+		
+		/* 
+		 事件对象
+		 当事件的响应函数被触发时，浏览器每次将会把操作对象作为实参传递给响应函数
+		 在事件的对象中封装了当前对象的一切信息
+		 */
+		
+		/* 
+		 在ie8中事件对象作为window对象属性保存
+		 */
+		areaDiv.onmousemove=function(event){
+			//显示坐标
+			/* 
+			 clientX
+			 clientY
+			 水平坐标和垂直坐标
+			 */
+			event=event || window.event;
+			showMsg.innerHTML="x="+event.clientX+" y="+event.clientY;
+		};
+	};
+
+</script>
+</head>
+<body>
+
+	<div id="areaDiv"></div>
+	<div id="showMsg"></div>
+
+</body>
+</html>

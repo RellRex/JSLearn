@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      //创建一个name变量
+      var name="全局";
+
+      //创建一个函数
+      function fun(){
+        console.log(this.name);  
+      };
+
+      obj={
+        name:"孙悟空",
+        sayFunc:fun
+      };
+
+      obj2={
+        name="猪八戒",
+        sayFunc:fun
+      };
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

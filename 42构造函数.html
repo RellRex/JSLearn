@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      /*
+      串构建一个构造函数
+      首字母大写
+      加new是构造函数，不加new是普通函数
+
+      1.创建一个对象
+      2.将新建的对象设置成函数中的this
+      3.逐行执行函数中的代码
+      4.将新建的对象作为返回值返回
+
+      我们将通过构造函数创建的对象成为该类的实例
+
+      使用instanceof可以检查一个对象是否是一个类的实例
+      所有的对象都是onject的后代
+
+      this稍微情况：
+      1.当以函数的形式调用时，this是window
+      2.当以方法的形式调用时，谁调用，就是谁
+      3.当以构造函数的形式调用时，this是构造函数
+      */
+
+      function Person(){
+        this.name="孙悟空";
+        //alert(this);
+      }
+      var per=new Person();
+      console.log(per.name);
+      console.log(per instanceof Person);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

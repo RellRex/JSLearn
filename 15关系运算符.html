@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      /*
+      通过关系运算符比较两个值的大小关系
+      关系成立返回true
+      关系不成立返回false
+
+
+      非数值的情况
+      任何值和null做任何比较，都是false
+      如果两边都是字符串，不会转换成数字，而会比较符号中的unicode编码
+      比较字符编码时是一位一位进行比较
+      如果两位一样，则比较下一位
+      比较中文是没有意义的
+      注意在比较字符串型的数字时一定要转型
+      */
+
+      var result=5>10;
+      console.log(result);
+      console.log(1>"0");
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

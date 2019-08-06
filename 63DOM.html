@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button type="button" name="button" id="btn">我是一个链接</button>
+    <script type="text/javascript">
+        /*
+        浏览器已经为我们提供了围挡结点
+        这个节点是window对象的属性
+        */
+        //console.log(document);
+
+        //获取button对象
+        var btn=document.getElementById("btn");
+
+        //修改链接的文字
+        console.log(btn.innerHTML);
+        console.log(btn);
+    </script>
+  </body>
+</html>

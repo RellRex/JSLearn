@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				//获取body标签
+				/* var body=document.getElementsByTagName("body")[0];
+				console.log(body); */
+				
+				/* 在我们的docment中保存着一个属性，就叫body */
+				var body=document.body;
+				
+				//document.documentElement保存的是html根标签
+				var de=document.documentElement;
+				
+				//document.all代表页面中的所有元素
+				var all=document.all;
+				
+				//还有一种方法
+				all=document.getElementsByTagName("*");
+				
+				/* 
+				根据元素的class属性查询一组元素结点对象 
+				这个方法不支持ie8及以下浏览器
+				*/
+				var box1=document.getElementsByClassName("box1")[0];
+				
+				//获取class为box1中的div
+				//css选择器 .box div
+				//document.querySelector可以根据选择器寻找
+				var div=document.querySelector(".box1 div");
+				
+				//
+				var box1=document.querySelectorAll(".box1 div");
+				console.log(box1.length);
+				
+			};
+		</script>
+	</head>
+	<body>
+		<div class="box1">孙悟空</div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

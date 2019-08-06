@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      /*
+        创建一个构造函数
+      */
+      function MyClass(){
+
+      };
+
+      MyClass.prototype.name="我是原型中的name";
+      var mc=new MyClass();
+
+      console.log(mc.name);
+
+      //检查是否有某个属性
+      console.log(mc.hasOwnProperty("name"));
+
+      //原型对象里面还有原型
+      //会不断到原型中寻找，知道找到object的原型
+      //object对象没有原型，如果没有找到，返回underfinied
+      
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

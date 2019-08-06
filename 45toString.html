@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      //当我们在页面中打印一个对象时，实际上输出的是对象的toString返回值
+      //我们想要获得具体的信息可以修改原型的toString
+
+      function Person(name,age,gender){
+        this.name=name;
+        this.age=age;
+        this.gender=gender;
+      };
+
+      Person.prototype.toString=function(){
+        return "Person[name="+this.name+",age="+this.age+",gender="+this.gender+"]";
+      };
+
+      per1=new Person("孙悟空",18,"男");
+      per2=new Person("猪八戒",20,"男");
+
+      console.log(per1);
+      console.log(per2);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

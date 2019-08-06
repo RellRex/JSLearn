@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    /*
+    浏览器加载页面是自上向下的顺序
+    如果将js代码写到页面的上面
+    */
+
+    /*
+    会在页面加载完成之后触发
+    可以把触发的函数写到window.onload里面
+    */
+
+    <script type="text/javascript">
+      window.onload=function(){
+      var btn=document.getElementById("btn");
+      btn.onclick=function(){
+        alert("hello");
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <button id="btn">点我一下</button>
+  </body>
+</html>

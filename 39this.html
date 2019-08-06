@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+
+      /*
+        解析器在调用函数每次都会向函数内部传递一个隐含的参数
+        这个隐含的参数就是this
+            1.以函数形式调用，this永远是window
+            2.以方法的形式调用，this永远是那个方法
+      */
+
+      function fun(){
+        //console.log("a = "+a+",b = "+b);
+        console.log(this);
+      };
+
+      //创建一个对象
+      var obj={
+        name:"孙悟空",
+        sayName:fun
+      };
+
+      obj.sayName();
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

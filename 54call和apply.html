@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      //函数的方法
+
+      function fun(){
+        alert(this);
+      };
+
+      fun();
+      /*
+      call()和apply()
+          -这两个方法都是函数对象的方法
+          -函数调用call和apply都会执行函数
+          -调用call和apply的时候可以将一个对象指定为第一个参数
+          此时这个对象可以成为函数执行时的this
+          -call可以将实参在对象之后依次传递
+          -apply需要将实参封装到数组中统一传递
+
+      使用call和apply调用时，this是指定的对象
+      */
+      var obj={name:"obj"};
+      fun.call(obj);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
